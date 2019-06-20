@@ -5,6 +5,7 @@
   "main": "build/index.js",
   "scripts": {
     "build": "tsc",
+    "build:simple": "npx open-rpc-generator-client -d simple-math-openrpc.json && rm -rf rust/ && mv typescript/src/index.ts src/types && rm -rf typescript",
     "lint": "tslint --fix -p .",
     "start": "npx jade-service-runner",
     "test": "npm run lint && jest --coverage"
@@ -13,9 +14,11 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@etclabscore/jade-service-runner": "^1.0.10",
+    "@open-rpc/generator-client": "^1.8.2",
     "@types/jest": "^24.0.13",
     "@types/ws": "^6.0.1",
     "jest": "^24.8.0",
+    "nexe": "^3.3.1",
     "ts-jest": "^24.0.2",
     "tslint": "^5.17.0",
     "typescript": "^3.5.1"

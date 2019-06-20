@@ -1,0 +1,66 @@
+{
+  "services": [
+    {
+      "name": "simple-math",
+      "rpcPort": "${DYNAMIC_TCP_PORT_1}",
+      "version": "1.0.0",
+      "environments": [
+        {
+          "name": "dev",
+          "args": {
+            "start": [
+              "-d",
+              "${SERVICE_DIR}/simple-math/simple-math-openrpc.json",
+              "-p",
+              "${DYNAMIC_TCP_PORT_1}"
+            ],
+            "stop": [],
+            "teardown": []
+          }
+        }
+      ],
+      "os": {
+        "osx": {
+          "commands": {
+            "setup": [
+              {
+                "cmd": "npm",
+                "args": [
+                  "install",
+                  "-g",
+                  "@open-rpc-mock-server@latest"
+                ]
+              }
+            ],
+            "start": "${SERVICE_DIR}/simple-math/open-rpc-mock-server",
+            "stop": "",
+            "teardown": ""
+          },
+          "assets": [
+            "https://github.com/zcstarr/simple-math-spec.zip"
+          ]
+        },
+        "linux": {
+          "commands": {
+            "setup": [
+              {
+                "cmd": "npm",
+                "args": [
+                  "install",
+                  "-g",
+                  "@open-rpc/mock-server@latest"
+                ]
+              }
+            ],
+            "start": "${SERVICE_DIR}/simple-math/open-rpc-mock-server",
+            "stop": "",
+            "teardown": ""
+          },
+          "assets": [
+            "https://github.com/zcstarr/simple-math-spec.zip"
+          ]
+        }
+      }
+    }
+  ]
+}
