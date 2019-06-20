@@ -10,7 +10,7 @@
           "args": {
             "start": [
               "-d",
-              "${SERVICE_DIR}/simple-math/simple-math-openrpc.json",
+              "${SERVICE_DIR}/simple-math-openrpc.json",
               "-p",
               "${DYNAMIC_TCP_PORT_1}"
             ],
@@ -32,12 +32,12 @@
                 ]
               }
             ],
-            "start": "${SERVICE_DIR}/simple-math/open-rpc-mock-server",
+            "start": "open-rpc-mock-server",
             "stop": "",
             "teardown": ""
           },
           "assets": [
-            "https://github.com/zcstarr/simple-math-spec.zip"
+            "https://github.com/zcstarr/jade-service-runner-example/blob/simple-math/simple-math-spec.zip"
           ]
         },
         "linux": {
@@ -52,12 +52,12 @@
                 ]
               }
             ],
-            "start": "${SERVICE_DIR}/simple-math/open-rpc-mock-server",
+            "start": "open-rpc-mock-server",
             "stop": "",
             "teardown": ""
           },
           "assets": [
-            "https://github.com/zcstarr/simple-math-spec.zip"
+            "https://github.com/zcstarr/jade-service-runner-example/blob/simple-math/simple-math-spec.zip"
           ]
         }
       }

@@ -29,9 +29,9 @@ const start = async () => {
       port,
     }});
   setTimeout(async () => {
-    const nine = await mathClient.addition(4, 5);
+    const nine = await mathClient.addition(2, 2);
     console.log(nine);
-  }, 10000);
+  }, 1000);
 };
 
 start();
