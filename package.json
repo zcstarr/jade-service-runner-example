@@ -6,15 +6,23 @@
   "scripts": {
     "build": "tsc",
     "lint": "tslint --fix -p .",
+    "start": "npx jade-service-runner",
     "test": "npm run lint && jest --coverage"
   },
   "author": "",
   "license": "Apache-2.0",
   "devDependencies": {
+    "@etclabscore/jade-service-runner": "^1.0.10",
     "@types/jest": "^24.0.13",
+    "@types/ws": "^6.0.1",
     "jest": "^24.8.0",
     "ts-jest": "^24.0.2",
     "tslint": "^5.17.0",
     "typescript": "^3.5.1"
+  },
+  "dependencies": {
+    "@etclabscore/ethereum-json-rpc": "^1.0.10",
+    "@etclabscore/jade-service-runner-client": "^1.0.10",
+    "ethjs-unit": "^0.1.6"
   }
 }
