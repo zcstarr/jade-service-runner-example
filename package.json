@@ -12,7 +12,7 @@
   "author": "",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@etclabscore/jade-service-runner": "^1.0.10",
+    "@etclabscore/jade-service-runner": "^1.7.4",
     "@types/jest": "^24.0.13",
     "@types/ws": "^6.0.1",
     "jest": "^24.8.0",
@@ -21,8 +21,8 @@
     "typescript": "^3.5.1"
   },
   "dependencies": {
-    "@etclabscore/ethereum-json-rpc": "^1.0.10",
-    "@etclabscore/jade-service-runner-client": "^1.0.10",
+    "@etclabscore/ethereum-json-rpc": "^1.2.3",
+    "@etclabscore/jade-service-runner-client": "^1.7.4",
     "ethjs-unit": "^0.1.6"
   }
 }
